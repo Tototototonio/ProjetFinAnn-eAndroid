@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_detail_nav"
+    app:startDestination="@id/showList">
+
+    <fragment
+        android:id="@+id/showDetail"
+        android:name="com.example.androidfinalproject.MepFragment"
+        android:label="ShowDetail" >
+        <argument
+            android:name="test"
+            app:argType="Test" />
+    </fragment>
+    <fragment
+        android:id="@+id/showList"
+        android:name="ListMep"
+        android:label="ShowList" >
+        <action
+            android:id="@+id/action_showList_to_showDetail"
+            app:destination="@id/showDetail" />
+    </fragment>
+</navigation>

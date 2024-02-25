@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardElevation = "0dp"
+    app:cardBackgroundColor="@color/card_element_background_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgEpisode"
+            android:layout_width="126dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/bords"
+            android:clipToOutline="true"
+            />
+
+        <TextView
+            android:id="@+id/numéroEpisode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/imgEpisode"
+            app:layout_constraintTop_toTopOf="@id/imgEpisode"
+            android:text="Episode #101"
+            />
+
+        <TextView
+            android:id="@+id/titreEpisode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/numéroEpisode"
+            app:layout_constraintTop_toBottomOf="@id/numéroEpisode"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:id="@+id/calendar_icon"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_calendar_bicolor"
+            app:layout_constraintStart_toStartOf="@id/titreEpisode"
+            app:layout_constraintTop_toBottomOf="@id/titreEpisode"
+            app:tint="@color/icon_foreground_color"
+            />
+
+        <TextView
+            android:id="@+id/episode_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@id/calendar_icon"
+            app:layout_constraintTop_toTopOf="@id/calendar_icon"
+            app:layout_constraintBottom_toBottomOf="@id/calendar_icon"
+            android:textColor="@color/white"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

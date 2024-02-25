@@ -1,0 +1,210 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Img"
+        android:layout_width="960dp"
+        android:layout_height="960dp"
+        android:layout_marginStart="-240dp"
+        android:layout_marginTop="-260dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/retour"
+        android:src="@drawable/retour"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Retour"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toEndOf="@id/retour"
+        app:layout_constraintTop_toTopOf="@id/retour"
+        app:layout_constraintBottom_toBottomOf="@id/retour"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/Affiche"
+        android:layout_width="95dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/retour"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bords" />
+
+
+    <ImageView
+        android:id="@+id/publisher_icon"
+        android:layout_marginTop="27dp"
+        android:layout_marginStart="18dp"
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_publisher_bicolor"
+        app:layout_constraintStart_toEndOf="@id/Affiche"
+        app:layout_constraintTop_toTopOf="@id/Affiche"
+        app:tint="@color/white"/>
+
+    <TextView
+        android:id="@+id/MaisonEdit"
+        android:layout_marginStart="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/publisher_icon"
+        app:layout_constraintTop_toTopOf="@id/publisher_icon"
+        app:layout_constraintBottom_toBottomOf="@id/publisher_icon"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/episodes_icon"
+        android:src="@drawable/ic_tv_bicolor"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="13dp"
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/publisher_icon"
+        app:layout_constraintStart_toEndOf="@id/Affiche"
+        app:tint="@color/white"/>
+
+    <TextView
+        android:id="@+id/NuméroEpisode"
+        android:layout_marginStart="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/episodes_icon"
+        app:layout_constraintBottom_toBottomOf="@id/episodes_icon"
+        app:layout_constraintStart_toEndOf="@id/episodes_icon"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/date_icon"
+        android:src="@drawable/ic_calendar_bicolor"
+        android:layout_marginTop="16.5dp"
+        android:layout_marginStart="18dp"
+        android:layout_width="17dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/episodes_icon"
+        app:layout_constraintStart_toEndOf="@id/Affiche"
+        android:adjustViewBounds="true"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_marginStart="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/date_icon"
+        app:layout_constraintBottom_toBottomOf="@id/date_icon"
+        app:layout_constraintStart_toEndOf="@id/date_icon"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/HistoireFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:text="Histoire"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/Affiche"
+        app:layout_constraintEnd_toStartOf="@id/PersonnnageFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="13dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/PersonnnageFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Personnages"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/HistoireFragment"
+        app:layout_constraintEnd_toStartOf="@id/EpisodeFragment"
+        app:layout_constraintStart_toEndOf="@id/HistoireFragment"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/EpisodeFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_weight="1"
+        android:text="Episodes"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/HistoireFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/PersonnnageFragment"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/history_tab_indicator"
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/orange_tab_indicator"
+        app:layout_constraintTop_toBottomOf="@id/HistoireFragment"
+        app:layout_constraintStart_toStartOf="@id/HistoireFragment"
+        app:layout_constraintEnd_toEndOf="@id/HistoireFragment"
+        />
+
+    <View
+        android:id="@+id/characters_tab_indicator"
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/PersonnnageFragment"
+        app:layout_constraintStart_toStartOf="@id/PersonnnageFragment"
+        app:layout_constraintEnd_toEndOf="@id/PersonnnageFragment"
+        android:background="@drawable/orange_tab_indicator" />
+
+    <View
+        android:id="@+id/episodes_tab_indicator"
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/EpisodeFragment"
+        app:layout_constraintStart_toStartOf="@id/EpisodeFragment"
+        app:layout_constraintEnd_toEndOf="@id/EpisodeFragment"
+
+        android:background="@drawable/orange_tab_indicator" />
+
+    <FrameLayout
+        android:id="@+id/containerpage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/couleurcard"
+        app:layout_constraintTop_toBottomOf="@id/characters_tab_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

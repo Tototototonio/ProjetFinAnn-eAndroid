@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="21dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/card_background_color"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageSerie"
+            android:layout_width="128dp"
+            android:layout_height="131dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bords"/>
+
+        <TextView
+            android:id="@+id/classementserie"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/position_indicator"/>
+
+        <TextView
+            android:id="@+id/titreSerie"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="11.14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/imageSerie"
+            app:layout_constraintStart_toEndOf="@id/imageSerie"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+
+        />
+
+        <ImageView
+            android:id="@+id/publisher_icon"
+            android:layout_width="15dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/ic_publisher_bicolor"
+            app:layout_constraintStart_toEndOf="@id/imageSerie"
+            app:layout_constraintTop_toBottomOf="@id/titreSerie" />
+
+        <TextView
+            android:id="@+id/producteurSerie"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@id/publisher_icon"
+            app:layout_constraintTop_toTopOf="@id/publisher_icon"
+            app:layout_constraintBottom_toBottomOf="@id/publisher_icon"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+        />
+
+
+        <ImageView
+            android:id="@+id/episodes_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="12.14dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/ic_tv_bicolor"
+            app:layout_constraintStart_toEndOf="@id/imageSerie"
+            app:layout_constraintTop_toBottomOf="@id/publisher_icon" />
+
+        <TextView
+            android:id="@+id/episodeSerie"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintStart_toEndOf="@id/episodes_icon"
+            app:layout_constraintTop_toTopOf="@id/episodes_icon"
+            app:layout_constraintBottom_toBottomOf="@id/episodes_icon"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+        />
+
+
+
+        <ImageView
+            android:id="@+id/calendar_icon"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="12.14dp"
+            android:layout_marginTop="11.75dp"
+            android:src="@drawable/ic_calendar_bicolor"
+            app:layout_constraintStart_toEndOf="@id/imageSerie"
+            app:layout_constraintTop_toBottomOf="@id/episodes_icon" />
+
+        <TextView
+            android:id="@+id/AnciennetéSerie"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/calendar_icon"
+            app:layout_constraintTop_toTopOf="@id/calendar_icon"
+            app:layout_constraintBottom_toBottomOf="@id/calendar_icon"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

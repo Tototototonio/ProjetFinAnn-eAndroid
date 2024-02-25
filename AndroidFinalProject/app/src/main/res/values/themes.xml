@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.androidfinalproject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CircleImageStyle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.androidfinalproject" parent="Base.Theme.androidfinalproject" />
+</resources>
